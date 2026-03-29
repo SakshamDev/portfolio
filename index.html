@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Gupta - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <canvas id="neural-canvas"></canvas>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">SAKSHAM<span>.</span></div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <div class="loading-text">INITIALIZING</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">SAKSHAM<span>.</span></a>
+            <nav>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Stack</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#experience" class="nav-link">Experience</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container" id="about">
+            <div class="hero-layout">
+                <div class="hero-text-content">
+                    <span class="hero-subtitle">> Hello_World</span>
+                    <h1 class="hero-title">Saksham Gupta</h1>
+                    <div class="typing-container">
+                        <span id="typing"></span>
+                    </div>
+                    <p class="hero-desc">
+                        Electrical & Electronics Engineer at BITS Pilani. 
+                        Specializing in <span style="color:#fff; font-weight: 600;">Machine Learning</span>, Web Development, and Data Science.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <div class="social-links">
+                            <a href="https://github.com/SakshamDev" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/sakshamgupta19" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:visit.sakshamx@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="cyber-frame">
+                        <div class="corner-accent corner-tl"></div>
+                        <div class="cyber-frame-inner">
+                            <img src="/images/podium.JPG" alt="Saksham Gupta Portrait">
+                        </div>
+                        <div class="corner-accent corner-br"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container" id="skills">
+            <span class="mono-text reveal">// TECH ARSENAL</span>
+            <h2 style="font-size: 40px; margin-top: 10px; margin-bottom: 20px;" class="reveal">What I Work With</h2>
+            <div class="skills-grid">
+                <div class="glass-card reveal">
+                    <span class="mono-text">01</span>
+                    <h3 style="margin: 15px 0;">Programming Languages</h3>
+                    <p style="color: #999; line-height: 1.7;">Python for ML/AI, C++ for performance, C for embedded systems.</p>
+                    <div class="skill-tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">C</span></div>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="mono-text">02</span>
+                    <h3 style="margin: 15px 0;">Machine Learning</h3>
+                    <p style="color: #999; line-height: 1.7;">Building predictive models with scikit-learn, pandas, and numpy.</p>
+                    <div class="skill-tags"><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="mono-text">03</span>
+                    <h3 style="margin: 15px 0;">Data Visualization</h3>
+                    <p style="color: #999; line-height: 1.7;">Creating insights through matplotlib and seaborn visualizations.</p>
+                    <div class="skill-tags"><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Data Analysis</span></div>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="mono-text">04</span>
+                    <h3 style="margin: 15px 0;">Web Development</h3>
+                    <p style="color: #999; line-height: 1.7;">Front-End, Back-End Development with UI/UX Expertise.</p>
+                    <div class="skill-tags"><span class="tag">Fullstack-Dev</span><span class="tag">UI/UX Design</span><span class="tag">Wordpress</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container" id="projects">
+            <span class="mono-text reveal">// FEATURED BUILDS</span>
+            <h2 style="font-size: 40px; margin-top: 10px; margin-bottom: 20px;" class="reveal">Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item reveal">
+                    <div class="project-visual">
+                        <svg width="100%" height="100%" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="800" height="300" fill="#0a0a0a"/>
+                            <line x1="50" y1="250" x2="150" y2="180" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="150" y1="180" x2="250" y2="200" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="250" y1="200" x2="350" y2="120" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="350" y1="120" x2="450" y2="140" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="450" y1="140" x2="550" y2="100" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="550" y1="100" x2="650" y2="130" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="650" y1="130" x2="750" y2="80" stroke="#fbbf24" stroke-width="2"/>
+                            <circle cx="50" cy="250" r="4" fill="#fbbf24"/>
+                            <circle cx="150" cy="180" r="4" fill="#fbbf24"/>
+                            <circle cx="250" cy="200" r="4" fill="#fbbf24"/>
+                            <circle cx="350" cy="120" r="4" fill="#fbbf24"/>
+                            <circle cx="450" cy="140" r="4" fill="#fbbf24"/>
+                            <circle cx="550" cy="100" r="4" fill="#fbbf24"/>
+                            <circle cx="650" cy="130" r="4" fill="#fbbf24"/>
+                            <circle cx="750" cy="80" r="4" fill="#fbbf24"/>
+                            <text x="50%" y="270" text-anchor="middle" fill="#555" font-size="14">ML Model Visualization</text>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <span class="mono-text">MACHINE LEARNING</span>
+                        <h3>Heart Disease Prediction Model</h3>
+                        <p>Built a classification model achieving 86.67% accuracy in predicting heart disease risk. Implemented feature engineering and cross-validation techniques.</p>
+                        <div class="skill-tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/SakshamDev/heart-disease-prediction" target="_blank" class="btn" style="padding: 10px 20px; font-size: 12px;">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item reveal">
+                    <div class="project-visual">
+                        <svg width="100%" height="100%" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="800" height="300" fill="#0a0a0a"/>
+                            <circle cx="400" cy="150" r="80" fill="none" stroke="#fbbf24" stroke-width="2"/>
+                            <circle cx="400" cy="150" r="50" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.6"/>
+                            <line x1="400" y1="150" x2="500" y2="150" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="400" y1="150" x2="300" y2="150" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="400" y1="150" x2="400" y2="250" stroke="#fbbf24" stroke-width="2"/>
+                            <line x1="400" y1="150" x2="400" y2="50" stroke="#fbbf24" stroke-width="2"/>
+                            <rect x="490" y="140" width="20" height="20" fill="#fbbf24"/>
+                            <rect x="290" y="140" width="20" height="20" fill="#fbbf24"/>
+                            <rect x="390" y="240" width="20" height="20" fill="#fbbf24"/>
+                            <rect x="390" y="40" width="20" height="20" fill="#fbbf24"/>
+                            <text x="50%" y="285" text-anchor="middle" fill="#555" font-size="14">CGPA Calculator with Target Symbol</text>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <span class="mono-text">Web Development</span>
+                        <h3>CGPA Calculator for BITS Students</h3>
+                        <p>Designed a website where students can keep track of their CGPA by adding their courses and keep tracking progress sem by sem.</p>
+                        <div class="skill-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                        <div class="project-links">
+                            <a href="#" class="btn" style="padding: 10px 20px; font-size: 12px;">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container" id="experience">
+            <span class="mono-text reveal">// CAREER PATH</span>
+            <h2 style="font-size: 40px; margin-top: 10px; margin-bottom: 20px;" class="reveal">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">Feb 2026 - Present</div>
+                    <h3 class="timeline-title">Machine Learning Team</h3>
+                    <div class="timeline-org">ACM - BPHC CHAPTER</div>
+                    <p style="color: #bbb; font-size: 15px;">Contributing to research-driven ML projects and organizing technical workshops for the student community.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">Jan 2026 - Present</div>
+                    <h3 class="timeline-title">Operations and Machine Learning Team</h3>
+                    <div class="timeline-org">IEEE Student Branch, BITS Pilani</div>
+                    <p style="color: #bbb; font-size: 15px;">Managing logistics for large-scale technical events and coordinating between departments, while building cool machine learning projects.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2025 - 2029</div>
+                    <h3 class="timeline-title">Bachelor of Engineering (B.E.)</h3>
+                    <div class="timeline-org">BITS Pilani Hyderabad Campus</div>
+                    <p style="color: #bbb; font-size: 15px;">Major in Electrical & Electronics Engineering. Active coursework in Circuit Design and Computer Programming.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="mono-text">READY TO COLLABORATE?</span>
+            <div class="footer-big-text">LET'S TALK</div>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 50px;">
+                <a href="https://github.com/SakshamDev" class="social-link" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://linkedin.com/sakshamgupta19" class="social-link" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:visit.sakshamx@gmail.com" class="social-link"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+
+            <p class="mono-text" style="color: #555;">&copy; 2026 Saksham Gupta. All Systems Operational.</p>
+        </div>
+    </footer>
+</body>
+</html>
