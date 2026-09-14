@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Award, GraduationCap, Terminal, Users, Cpu, FileText, ShieldCheck, Atom } from "lucide-react";
+import { GraduationCap, Terminal, Users, Cpu, ShieldCheck, Atom } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./Section";
 

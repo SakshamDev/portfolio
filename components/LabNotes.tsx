@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, ShieldCheck, Cpu, Binary } from "lucide-react";
+import { Activity, Cpu, Binary } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./Section";
 
