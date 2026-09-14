@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-dm-serif: 'DM Serif Display', serif;
+  --accent: #F5A623;
+  --accent-rgb: 245, 166, 35;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: #09090b;
+  color: #f4f4f5;
+}
+
+body {
+  background-color: #09090b;
+  color: #f4f4f5;
+  font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.25);
+  color: #f4f4f5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Typography utilities */
+.font-mono { font-family: var(--font-ibm-plex-mono), monospace; }
+.font-sans { font-family: var(--font-space-grotesk), sans-serif; }
+.font-serif { font-family: var(--font-dm-serif), serif; }
+
+/* Status dot */
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+  flex-shrink: 0;
+}
+
+/* Section styling */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+/* Subtle corner mark */
+.corner-frame {
+  position: relative;
+}
+.corner-frame::before,
+.corner-frame::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-color: #3f3f46;
+  border-style: solid;
+  pointer-events: none;
+}
+.corner-frame::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+.corner-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Reveal scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loader Glitch & Glow */
+.loader-glitch {
+  animation: subtleGlitch 3.5s infinite;
+  text-shadow: 0 0 20px rgba(245, 166, 35, 0.35);
+}
+
+@keyframes subtleGlitch {
+  0%, 92%, 100% {
+    transform: translate(0, 0);
+    text-shadow: 0 0 20px rgba(245, 166, 35, 0.35);
+  }
+  93% {
+    transform: translate(-1.5px, 0.5px);
+    text-shadow: -1.5px 0 #F5A623, 1.5px 0 #10b981;
+  }
+  95% {
+    transform: translate(1.5px, -0.5px);
+    text-shadow: 1.5px 0 #F5A623, -1.5px 0 #FFC85A;
+  }
+  97% {
+    transform: translate(0, 0);
+    text-shadow: 0 0 20px rgba(245, 166, 35, 0.35);
+  }
+}
+
+/* Shimmer bar animation */
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmerSweep 1.8s infinite ease-in-out;
+}
+
+/* Telemetry Line Animation */
+.telemetry-trace {
+  stroke-dasharray: 6 3;
+  animation: flowTrace 16s linear infinite;
+}
+
+@keyframes flowTrace {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Subtle float animation */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Interactive Card Hover Glow */
+.card-glow {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 8px 28px -10px rgba(245, 166, 35, 0.15);
+}
