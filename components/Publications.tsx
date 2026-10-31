@@ -1,10 +1,31 @@
 "use client";
 
-import { FileText, Bookmark, CheckCircle2, ShieldCheck, BarChart3 } from "lucide-react";
+import { FileText, Bookmark, CheckCircle2, ShieldCheck, BarChart3, Download } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./Section";
 
+const SNN_PAPER = {
+  id: "snn-preprint-2026",
+  repository: "engrXiv · Submitted to Stanford Undergraduate Research Journal (SURJ)",
+  submitted: "Under review",
+  title: "From Hidden Spikes to Whole-Network Savings: Regularization versus Threshold Scaling in a Spiking Neural Network",
+  author: "Saksham Gupta",
+  affiliation: "BITS Pilani, Hyderabad Campus",
+  description:
+    "This work asks whether suppressing hidden spikes reduces whole-network synaptic activity in a rate-encoded Fashion-MNIST spiking neural network, comparing hidden-spike regularization during training with uniform hidden-threshold scaling after training. At 16 simulation steps, regularization reduced total synaptic operations (SynOps) by 3.449% (95% paired interval 3.150–3.748%) with an accuracy change of +0.046 percentage points, and cut hidden-output SynOps by 43.585%. Against the validation-selected threshold policy it achieved 1.024 points higher accuracy and 2.742% fewer total SynOps. Unchanged input events impose an accounting ceiling of 7.939% average total savings. Results do not establish hardware energy savings or generalization beyond this benchmark.",
+  keywords: [
+    "Spiking Neural Networks",
+    "Activity Regularization",
+    "Threshold Scaling",
+    "Synaptic Operations",
+    "Neuromorphic Computing",
+  ],
+  pdf: "/papers/From-Hidden-Spikes-to-Whole-Network-Savings-Regularization-versus-Threshold-Scaling-in-a-Spiking-Neural-Network.pdf",
+  note: "Preprint · not peer reviewed",
+};
+
 const INDISCON_PAPER = {
+  pdf: "/papers/Temporal-Cross-Channel-Features-for-Eavesdropping-Detection-in-Free-Space-BBM92-QKD-under-Hierarchical-Threat-Models.pdf",
   id: "indiscon-2026",
   status: "ACCEPTED",
   venue: "7th IEEE India Council International Subsections Conference (INDISCON 2026)",
@@ -191,6 +212,62 @@ export default function Publications() {
           </div>
         </Reveal>
 
+        {/* Paper 0: SNN Preprint (engrXiv, submitted to SURJ) */}
+        <Reveal delay={90}>
+          <div className="bg-bg-card border border-border hover:border-accent-teal/40 rounded-xl p-8 sm:p-10 transition-all duration-300 shadow-xl corner-frame">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-border/70">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-accent-teal/10 border border-accent-teal/40 text-accent-teal font-mono text-xs font-semibold tracking-wider">
+                  <span>PREPRINT</span>
+                </span>
+                <span className="font-mono text-xs tracking-wider text-text-primary font-medium">
+                  {SNN_PAPER.repository}
+                </span>
+              </div>
+              <span className="font-mono text-xs text-text-muted">{SNN_PAPER.submitted}</span>
+            </div>
+
+            <h3 className="font-sans font-bold text-2xl sm:text-3xl text-text-primary leading-snug mb-3">
+              {SNN_PAPER.title}
+            </h3>
+
+            <div className="font-mono text-xs sm:text-sm text-text-secondary mb-6">
+              <span className="text-text-primary font-semibold">{SNN_PAPER.author}</span> ·{" "}
+              <span className="text-accent-teal">{SNN_PAPER.affiliation}</span>
+            </div>
+
+            <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-8 max-w-4xl">
+              {SNN_PAPER.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              {SNN_PAPER.keywords.map((kw) => (
+                <span
+                  key={kw}
+                  className="font-mono text-[11px] tracking-wider px-2.5 py-1 rounded bg-bg-subtle border border-border text-text-muted"
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border/60">
+              <a
+                href={SNN_PAPER.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider px-3.5 py-1.5 rounded bg-bg-subtle border border-border text-accent-teal hover:border-accent-teal/60 transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>VIEW / DOWNLOAD PDF</span>
+              </a>
+              <span className="font-mono text-xs tracking-wider text-text-muted">
+                {SNN_PAPER.note}
+              </span>
+            </div>
+          </div>
+        </Reveal>
+
         {/* Featured Paper 1: IEEE INDISCON 2026 */}
         <Reveal delay={120}>
           <div className="bg-bg-card border border-border hover:border-accent-teal/40 rounded-xl p-8 sm:p-10 transition-all duration-300 shadow-xl corner-frame">
@@ -249,6 +326,10 @@ export default function Publications() {
                   <ShieldCheck className="w-3.5 h-3.5" />
                   <span>PRESENTATION: MNIT JAIPUR · SEP 2026</span>
                 </span>
+                <a href={INDISCON_PAPER.pdf} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider px-3.5 py-1.5 rounded bg-bg-subtle border border-border text-accent-teal hover:border-accent-teal/60 transition-colors">
+                  <Download className="w-3.5 h-3.5" />
+                  <span>VIEW / DOWNLOAD PAPER</span>
+                </a>
               </div>
 
               <span className="font-mono text-xs tracking-wider text-text-muted flex items-center gap-1.5">
