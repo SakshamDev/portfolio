@@ -6,7 +6,7 @@ import { SectionLabel } from "./Section";
 
 const SNN_PAPER = {
   id: "snn-preprint-2026",
-  repository: "engrXiv · Submitted to Stanford Undergraduate Research Journal (SURJ)",
+  repository: "HAL Open Science · Submitted to Stanford Undergraduate Research Journal (SURJ)",
   submitted: "Under review",
   title: "From Hidden Spikes to Whole-Network Savings: Regularization versus Threshold Scaling in a Spiking Neural Network",
   author: "Saksham Gupta",
